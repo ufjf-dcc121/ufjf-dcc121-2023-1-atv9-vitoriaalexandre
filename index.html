@@ -26,7 +26,7 @@
         <p></p>
         <h2>Visitas</h2>
         <ol>
-            
+
         </ol>
     </main>
     <script>
@@ -48,12 +48,35 @@
             form.reset();
             form.nome.focus();
 
-            const li = document.createElement('li');
-            li.textContent = nomeCompleto;
-            console.log(li);
-            ol.appendChild(li);  
+            adicionaLista(nomes, sobrenome, idade);
 
         }
+
+            function adicionaLista(nomes, sobrenome, idade) {
+                const li = document.createElement('li');
+                const divPessoa = document.createElement("div");
+                divPessoa.classList.add("pessoa");
+
+                const spanNome = document.createElement('div');
+                spanNome.classList.add('nomes');
+                spanNome.textContent = nomes;
+                divPessoa.appendChild(spanNome);
+
+                const spanSobrenome = document.createElement('div');
+                spanSobrenome.classList.add('sobrenome');
+                spanSobrenome.textContent = sobrenome;
+                divPessoa.appendChild(spanSobrenome);
+
+                const spanIdade = document.createElement('div');
+                spanIdade.classList.add('idade');
+                spanIdade.textContent = idade;
+                divPessoa.appendChild(spanIdade);
+
+                li.append(divPessoa);
+                console.log(li);
+                ol.appendChild(li); 
+        }
+
     </script>
 </body>
 </html>
