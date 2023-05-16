@@ -39,6 +39,9 @@
             const nomeCompleto = `${nomes} ${sobrenome}, ${idade} anos`;
             console.log(nomeCompleto);
             pNome.innerHTML = `Ola <span>${nomeCompleto}</span> !`;
+
+            form.reset();
+            form.nome.focus();
         }
     </script>
 </body>
