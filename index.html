@@ -20,6 +20,14 @@
 
         </form>
     </main>
-    
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit",noEnvio);
+        
+        function noEnvio(event){
+            event.preventDefault();
+            console.log("Hello, Form");
+        }
+    </script>
 </body>
 </html>
