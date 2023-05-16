@@ -24,10 +24,15 @@
             <input type="reset" />
         </form>
         <p></p>
+        <h2>Visitas</h2>
+        <ol>
+            
+        </ol>
     </main>
     <script>
         const form = document.querySelector("form");
         const pNome = document.querySelector("p");
+        const ol = document.querySelector("ol");
         form.addEventListener("submit",noEnvio);
         
         function noEnvio(event){
@@ -42,6 +47,12 @@
 
             form.reset();
             form.nome.focus();
+
+            const li = document.createElement('li');
+            li.textContent = nomeCompleto;
+            console.log(li);
+            ol.appendChild(li);  
+
         }
     </script>
 </body>
