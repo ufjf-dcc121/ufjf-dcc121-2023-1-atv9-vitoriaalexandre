@@ -27,6 +27,11 @@
         function noEnvio(event){
             event.preventDefault();
             console.log("Hello, Form");
+            const nomes = form.nome.value;
+            const sobrenome = form.sobrenome.value;
+            const idade = Number(form.idade.value);
+            const nomeCompleto = `${nomes} ${sobrenome}, ${idade} anos`;
+            console.log(nomeCompleto);
         }
     </script>
 </body>
